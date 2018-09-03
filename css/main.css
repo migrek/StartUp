@@ -1,0 +1,450 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CUSTOM STYLES */
+@font-face {
+    font-family: 'Roboto Slab Thin';
+    src: url(../fonts/robotoslabthin.woff2) format('woff2'), url(../fonts/robotoslabthin.woff) format('woff'), url(../fonts/robotoslabthin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab Light';
+    src: url(../fonts/robotoslablight.woff2) format('woff2'), url(../fonts/robotoslablight.woff) format('woff'), url(../fonts/robotoslablight.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab Regular';
+    src: url(../fonts/robotoslabregular.woff2) format('woff2'), url(../fonts/robotoslabregular.woff) format('woff'), url(../fonts/robotoslabregular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab Bold';
+    src: url(../fonts/robotoslabbold.woff2) format('woff2'), url(../fonts/robotoslabbold.woff) format('woff'), url(../fonts/robotoslabbold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+.background-home {
+	height: 792px;
+	background-image: url(../images/back-home.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+	padding-top: 40px;
+}
+
+.logo {
+	margin-right:10px;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 36px;
+	text-decoration: none;
+	padding: 0 14px;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	padding-right: 80px;
+}
+
+.ref-menu {
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 24px;
+    display: block;
+    text-decoration: none;
+	margin: auto 0;
+	padding: 0 14px;
+}
+
+.ref-menu:hover, .logo:hover {
+    background-color: rgba(0,0,0, .5);
+   border-radius: 5px;
+}
+
+.welcome-block {
+	height: 716px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.welcome-main-text {
+ color: #ffffff;
+ text-transform: uppercase;
+ font-size: 48px;
+ margin-bottom: 30px;
+ font-weight: bold;
+}
+
+.welcome-text {
+	color: #ffffff;
+	font-family: 'Roboto Slab Regular', serif;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+
+.start-button {
+	text-transform: uppercase;
+	border: 2px solid #ffffff;
+	font-size: 16px;
+	padding: 20px 0;
+	width: 180px;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+	color: #ffffff;
+	margin: 0 auto;
+	cursor: pointer; 
+}
+
+.main-block-size {
+	padding: 100px 0;
+}
+
+.standart-width {
+	max-width: 1140px;
+	margin: auto;
+}
+
+.services-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wrapper-caption {
+	text-align: center;
+    padding-bottom: 70px;
+}
+
+.h-caption {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	color: #555555;
+}
+
+.h-caption::after {
+	width: 30px;
+	height: 2px;
+	margin: 0 calc(50% - 15px);
+	background-color: #555555;
+	display: block;
+	margin-top: 25px;
+	content: '';
+}
+
+.p-caption {
+	font-size: 16px;
+	color: #555555;
+	font-family: 'Roboto Slab Regular', serif;
+}
+
+.wrapper-services-items {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.services-item {
+	max-width: 350px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+.circle-item {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 2px solid #dddddd;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.item-caption {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #555555;
+	margin-bottom: 20px;
+}
+
+.item-text {
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'Roboto Slab Regular', serif;
+	color: #555555;
+}
+
+.about-team {
+	background-color: #f8f8f8;
+}
+
+.general-team-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 70px;
+}
+
+.general-team-info-item {
+	max-width: 555px;
+	margin: 0 15px;
+}
+
+.photo-slider {
+	position: relative;
+}
+
+.control-button {
+	width: 35px;
+	height: 38px;
+	position: absolute;
+	background-color: #c0301c;
+	color: #ffffff;
+	top: 105px;
+	z-index: 1;
+	line-height: 38px;
+	margin: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.control-button:hover {
+	background-color: rgba(0,0,0, .3);
+}
+.first-cont-button {
+	left: 20px;
+}
+
+.second-cont-button {
+	right: 20px;
+
+}
+
+.slides-wrapper {
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.slider-item {
+	display: flex;
+	flex-direction: column;
+	max-width: 260px;
+	margin: 0 10px;
+	position: relative;
+}
+
+.wrapper-photo-block {
+	width: 260px;
+	height: 250px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.wrapper-photo-block:hover .social-icons-line, .shadow-mask-black {
+	visibility: visible;
+}
+
+.person-photo {
+	width: 260px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.social-icons-line {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 195px;
+}
+
+.shadow-mask-black {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, .3);
+	visibility: hidden;
+}
+
+.social-icon {
+	color: #ffffff;
+	font-size: 14px;
+	height: 28px;
+	width: 28px;
+	text-align: center;
+	line-height: 28px;
+}
+
+.social-icon:hover {
+	background-color: #c0301c;
+} 
+
+.person-name {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.person-position {
+	font-size: 13px;
+	text-align: center;
+}
+
+.works-samples {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.types-work-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;	
+}
+
+.type-work {
+	margin: 0 10px;
+	text-decoration: none;
+}
+
+.type-work:hover {
+	color: #c0301c;
+}
+
+.wrapper-works-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.work-item {
+	width: 365px;
+	height: 320px;
+	margin: 0 15px 30px 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+.work-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.work-item:hover .shadow-mask-pink {
+	visibility: visible;
+}
+
+.wrapper-about-work {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.shadow-mask-pink {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(192,48,28, .7);
+	visibility: hidden;
+}
+
+.work-name {
+	color: #ffffff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 24px;
+}
+
+.work-classification-type {
+	font-family: 'Roboto Slab Regular', serif;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+	line-height: 24px;
+}
+
+.view-button {
+	text-transform: uppercase;
+	border: none;
+	font-size: 14px;
+	line-height: 38px;
+	width: 100px;
+	background-color: #ffffff;
+	color: #c0301c;
+	margin: 0 auto;
+	cursor: pointer; 
+}
