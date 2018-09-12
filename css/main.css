@@ -87,6 +87,7 @@ html, body {
     display: flex;
     justify-content: space-between;
 	padding-top: 40px;
+	flex-wrap: wrap;
 }
 
 .logo {
@@ -104,6 +105,7 @@ html, body {
     flex-direction: row;
 	justify-content: space-between;
 	padding-right: 80px;
+	flex-wrap: wrap;
 }
 
 .ref-menu {
@@ -305,6 +307,7 @@ html, body {
 display: flex;
 flex-direction: row;
 justify-content: center;
+flex-wrap: wrap;
 }
 
 .slider-item {
@@ -506,12 +509,13 @@ justify-content: center;
 .img-blog-item {
 	width: 460px;
 	height: 320px;
-	margin-right: 30px;
 }
 
 .blog-item-info {
 	display: flex;
 	flex-direction: column;
+	max-width: 650px;
+	margin-left: 30px;
 }
 
 .blog-item-info-main {
@@ -595,11 +599,6 @@ justify-content: center;
 	color: #c0301c;
 }
 
-.clients-logo {
-	display: flex;
-	flex-direction: row;
-}
-
 .clients-block {
 	display: flex;
 	flex-direction: column;
@@ -611,8 +610,7 @@ justify-content: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	vertical-align: auto;
-
+	flex-wrap: wrap;
 }
 
 .clients-logo-ref {
@@ -674,13 +672,14 @@ justify-content: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .main-contact-info {
 	display: flex;
 	flex-direction: column;	
-	margin-right: 80x;
-	min-width: 300px;
+	margin-right: 80px;
+	min-width: 270px;
 
 }
 
@@ -730,8 +729,8 @@ justify-content: center;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	min-width: 770px;
-	margin: 0 15px;
+	max-width: 760px;
+	margin: 0 auto;
 }
 
 .contact-form-main-item {
@@ -742,7 +741,7 @@ justify-content: center;
 	font-family: 'Roboto Slab Regular', serif;
 	padding: 15px;
 	box-sizing: border-box;
-	margin: 0 30px 20px 0;
+	margin: 0 15px 20px 15px;
 	outline: none;
 }
 
@@ -756,7 +755,7 @@ justify-content: center;
 }
 
 .contact-form-textarea {
-	width: 730px;
+	width: 100%;
 	height: 100px;
 	overflow: auto;
 	resize: none;
@@ -833,3 +832,28 @@ justify-content: center;
 	margin-bottom: 25px;
 	content: '';
 }
+
+@media all and (max-width: 920px) {
+
+.blog-item {
+	flex-wrap: wrap;}
+	
+ .blog-item-info {
+	 margin-top: 35px;
+ }
+}
+
+@media all and (max-width: 600px) {
+
+	
+    .contact-form {
+	   flex-direction: column;}
+	   
+	.contact-form-textarea {
+		max-width: 350px;}
+
+	.main-contact-info {
+		margin: auto;}
+}
+
+
